@@ -36,6 +36,15 @@ export async function registerAction(formData: FormData) {
       return { success: false, error: 'Name, email, and password are required.' };
     }
 
+    // Early check — give a user-friendly message if DB not configured
+    if (!process.env.DATABASE_URL) {
+      return {
+        success: false,
+        error: 'The database is not configured yet. Please contact support at bullrunapex@gmail.com',
+        setupRequired: true,
+      };
+    }
+
     const trimmedEmail = email.trim().toLowerCase();
     
     // Check if user exists

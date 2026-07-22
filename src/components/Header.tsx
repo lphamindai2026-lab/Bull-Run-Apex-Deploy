@@ -81,6 +81,8 @@ export default function Header({ user }: HeaderProps) {
         setError('Enter your 6-digit 2FA code below (use 123456 for demo).');
       } else if (res.success) {
         setShowModal(false); window.location.href = '/terminal';
+      } else if (res.setupRequired) {
+        setError('⚙️ Database setup required. Add DATABASE_URL in Vercel settings, then redeploy.');
       } else {
         setError(res.error || 'Authentication failed.');
       }

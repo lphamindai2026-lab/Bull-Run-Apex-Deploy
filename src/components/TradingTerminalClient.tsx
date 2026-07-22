@@ -245,14 +245,14 @@ export default function TradingTerminalClient({ user, initialOpenTrades }: Props
             )}
           </div>
 
-          {/* Chart body */}
-          <div className="flex-1 relative min-h-[380px]">
+          {/* Chart body — explicit pixel height so flex-1 never collapses to 0 */}
+          <div className="relative" style={{ height: '420px', minHeight: '420px' }}>
             {chartMode==='TV' ? (
-              <div className="absolute inset-0">
+              <div style={{ position: 'absolute', inset: 0, height: '100%', width: '100%' }}>
                 <TradingViewWidget symbol={selectedSymbol} />
               </div>
             ) : (
-              <div className="absolute inset-0 p-3">
+              <div style={{ position: 'absolute', inset: 0, padding: '12px' }}>
                 <SMCChart active={active} showOB={showOB} showFVG={showFVG} showBOS={showBOS} smcTags={smcTags} seedCandles={seedCandles} />
               </div>
             )}
