@@ -1,18 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#6b21a8"/>
-      <stop offset="100%" stop-color="#3b0764"/>
+    <radialGradient id="bg" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#5b21b6"/>
+      <stop offset="60%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#2e1065"/>
     </radialGradient>
-    <radialGradient id="glow" cx="50%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3"/>
+    <radialGradient id="face" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#d4956a"/>
+      <stop offset="100%" stop-color="#b5734a"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
     </radialGradient>
   </defs>
+  <!-- Background -->
   <rect width="400" height="400" fill="url(#bg)"/>
   <rect width="400" height="400" fill="url(#glow)"/>
-  <text x="200" y="185" font-family="system-ui,sans-serif" font-size="120" font-weight="900" fill="white" text-anchor="middle" opacity="0.95">H</text>
-  <text x="200" y="240" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#d8b4fe" text-anchor="middle" letter-spacing="4">HIMANSHU</text>
-  <text x="200" y="268" font-family="system-ui,sans-serif" font-size="13" font-weight="500" fill="#a78bfa" text-anchor="middle" letter-spacing="2">BHMNIYA</text>
-  <text x="200" y="295" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle" letter-spacing="1">FOUNDER · BULL RUN APEX AI</text>
+  <!-- Body / Purple jacket -->
+  <ellipse cx="200" cy="340" rx="140" ry="100" fill="#6d28d9"/>
+  <ellipse cx="200" cy="320" rx="110" ry="90" fill="#7c3aed"/>
+  <!-- Jacket lapels -->
+  <polygon points="180,220 160,310 200,280 240,310 220,220 200,240" fill="#5b21b6"/>
+  <!-- Inner shirt -->
+  <ellipse cx="200" cy="270" rx="35" ry="50" fill="#6d28d9"/>
+  <!-- Neck -->
+  <rect x="185" y="190" width="30" height="40" rx="10" fill="#c9845e"/>
+  <!-- Head -->
+  <ellipse cx="200" cy="165" rx="68" ry="78" fill="url(#face)"/>
+  <!-- Hair - dark, styled upward -->
+  <ellipse cx="200" cy="100" rx="65" ry="45" fill="#1a0a00"/>
+  <ellipse cx="200" cy="95" rx="55" ry="32" fill="#2d1200"/>
+  <!-- Hair styling - swept up -->
+  <path d="M150 120 Q170 80 200 75 Q230 80 250 120" fill="#1a0a00"/>
+  <!-- Ears -->
+  <ellipse cx="133" cy="168" rx="12" ry="16" fill="#c9845e"/>
+  <ellipse cx="267" cy="168" rx="12" ry="16" fill="#c9845e"/>
+  <!-- Eyes -->
+  <ellipse cx="175" cy="162" rx="13" ry="10" fill="white"/>
+  <ellipse cx="225" cy="162" rx="13" ry="10" fill="white"/>
+  <ellipse cx="177" cy="163" rx="8" ry="8" fill="#2d1200"/>
+  <ellipse cx="227" cy="163" rx="8" ry="8" fill="#2d1200"/>
+  <ellipse cx="179" cy="161" rx="3" ry="3" fill="#1a0a00"/>
+  <ellipse cx="229" cy="161" rx="3" ry="3" fill="#1a0a00"/>
+  <!-- Eyebrows -->
+  <path d="M163 148 Q177 143 190 148" stroke="#1a0a00" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M210 148 Q223 143 237 148" stroke="#1a0a00" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M195 170 Q200 185 205 170" stroke="#a0633e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Mouth - slight smile -->
+  <path d="M182 195 Q200 207 218 195" stroke="#8b4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Watch on left wrist -->
+  <rect x="148" y="300" width="22" height="14" rx="4" fill="#888" stroke="#aaa" stroke-width="1"/>
+  <rect x="152" y="303" width="14" height="8" rx="2" fill="#222"/>
+  <!-- White pants hint at bottom -->
+  <ellipse cx="200" cy="395" rx="120" ry="30" fill="#e8e8e8"/>
+  <!-- Name text -->
+  <text x="200" y="28" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">Himanshu Bhmniya</text>
+  <text x="200" y="46" font-family="Arial, sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle" letter-spacing="2">FOUNDER · BULL RUN APEX AI</text>
 </svg>

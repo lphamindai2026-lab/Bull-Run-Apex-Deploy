@@ -18,14 +18,19 @@ import "./globals.css";
 // Always resolve from environment variables.
 // ─────────────────────────────────────────────────────────────
 function getSiteUrl(): string {
-  // Production domain configured by the owner
+  // 1. Explicit env var set in Vercel dashboard
   if (process.env.NEXT_PUBLIC_SITE_URL &&
-      !process.env.NEXT_PUBLIC_SITE_URL.includes('YOUR_PRODUCTION_DOMAIN') &&
-      !process.env.NEXT_PUBLIC_SITE_URL.includes('localhost')) {
+      !process.env.NEXT_PUBLIC_SITE_URL.includes('YOUR_') &&
+      !process.env.NEXT_PUBLIC_SITE_URL.includes('localhost') &&
+      !process.env.NEXT_PUBLIC_SITE_URL.includes('7471s')) {
     return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '');
   }
-  // Vercel auto-provides this on every deployment
-  if (process.env.VERCEL_URL) {
+  // 2. Vercel stable production URL (never the per-commit SSO preview URL)
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  // 3. Hardcoded stable alias — this is the permanent public URL
+  if (process.env.VERCEL_URL && !process.env.VERCEL_URL.includes('7471s')) {
     return `https://${process.env.VERCEL_URL}`;
   }
   // Development fallback — NOT used in production
