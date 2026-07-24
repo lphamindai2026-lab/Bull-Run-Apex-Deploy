@@ -5,6 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import MobileHeader from "@/components/MobileHeader";
 import FounderPhoto from "@/components/FounderPhoto";
 import CustomCursor from "@/components/ui/CustomCursor";
+import AIChatbot from "@/components/ui/AIChatbot";
 import "./globals.css";
 
 function getSiteUrl(): string {
@@ -118,6 +119,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
 
         {/* Custom gold cursor */}
         <CustomCursor />
+
+        {/* AI Chatbot — always visible */}
+        <AIChatbot />
 
         {/* Ambient auras */}
         <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
